@@ -1,0 +1,12 @@
+<?php
+namespace App\Controllers;
+class HomeController extends ControllerBase
+{
+    public function __construct() {
+        parent::__construct(true, __CLASS__);
+    }
+    public function index(){
+        error_log("HomeController::Index()");
+        echo parent::getIndex("home/index", ['userName' => "Admin"]);
+    }
+}

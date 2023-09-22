@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Verificar si la solicitud no se está dirigiendo ya a la carpeta 'public' o a 'App/public'
+RewriteCond %{REQUEST_URI} !^/(App/)?public/
+
+# Redireccionar la solicitud a la carpeta 'public' dentro de 'App'
+RewriteRule ^(.*)$ /App/public/index.php?url=$1 [QSA,L]

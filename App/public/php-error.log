@@ -1,0 +1,14 @@
+[22-Sep-2023 21:24:59 Europe/Berlin] ##############################################
+[22-Sep-2023 21:24:59 Europe/Berlin] CONTROLADOR CARGADO: LoginController
+[22-Sep-2023 21:24:59 Europe/Berlin] LoginController::Index()
+[22-Sep-2023 21:25:01 Europe/Berlin] ##############################################
+[22-Sep-2023 21:25:02 Europe/Berlin] CONTROLADOR CARGADO: LoginController
+[22-Sep-2023 21:25:02 Europe/Berlin] LoginController::LOGIN()
+[22-Sep-2023 21:25:02 Europe/Berlin] LoginController::validateCredentials()
+[22-Sep-2023 21:25:02 Europe/Berlin] *CREDENCIALES INVALIDAS*
+[22-Sep-2023 21:25:02 Europe/Berlin] ##############################################
+[22-Sep-2023 21:25:02 Europe/Berlin] CONTROLADOR CARGADO: LoginController
+[22-Sep-2023 21:25:02 Europe/Berlin] LoginController::Index()
+[22-Sep-2023 21:25:56 Europe/Berlin] ##############################################
+[22-Sep-2023 21:25:56 Europe/Berlin] CONTROLADOR CARGADO: LoginController
+[22-Sep-2023 21:25:56 Europe/Berlin] LoginController::Index()

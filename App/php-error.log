@@ -1,0 +1,58 @@
+[22-Sep-2023 18:31:42 Europe/Berlin] ##############################################
+[22-Sep-2023 18:31:42 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 27
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_URI" in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 28
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 31
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   3. strpos($haystack = NULL, $needle = '?') C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php:31
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Deprecated:  rawurldecode(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 34
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP   3. rawurldecode($string = NULL) C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php:34
+[22-Sep-2023 18:31:43 Europe/Berlin] PHP Fatal error:  Uncaught LogicException: The specified path "App/views/templates" does not exist. in C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Template\Directory.php:35
+Stack trace:
+#0 C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Template\Directory.php(24): League\Plates\Template\Directory->set('App/views/templ...')
+#1 C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Engine.php(62): League\Plates\Template\Directory->__construct('App/views/templ...')
+#2 C:\Users\Fabian\PhpstormProjects\untitled\App\controllers\ControllerBase.php(16): League\Plates\Engine->__construct('App/views/templ...')
+#3 C:\Users\Fabian\PhpstormProjects\untitled\App\controllers\Error.controller.php(7): App\Controllers\ControllerBase->__construct()
+#4 C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php(40): App\Controllers\ErrorController->__construct()
+#5 C:\Users\Fabian\PhpstormProjects\untitled\App\index.php(10): App->__construct()
+#6 {main}
+  thrown in C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Template\Directory.php on line 35
+[22-Sep-2023 19:02:45 Europe/Berlin] ##############################################
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 27
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_URI" in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 28
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 31
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   3. strpos($haystack = NULL, $needle = '?') C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php:31
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Deprecated:  rawurldecode(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php on line 34
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Stack trace:
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   1. {main}() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:0
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   2. App->__construct() C:\Users\Fabian\PhpstormProjects\untitled\App\index.php:10
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP   3. rawurldecode($string = NULL) C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php:34
+[22-Sep-2023 19:02:46 Europe/Berlin] PHP Fatal error:  Uncaught LogicException: The specified path "App/views/templates" does not exist. in C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Template\Directory.php:35
+Stack trace:
+#0 C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Template\Directory.php(24): League\Plates\Template\Directory->set('App/views/templ...')
+#1 C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Engine.php(62): League\Plates\Template\Directory->__construct('App/views/templ...')
+#2 C:\Users\Fabian\PhpstormProjects\untitled\App\controllers\ControllerBase.php(16): League\Plates\Engine->__construct('App/views/templ...')
+#3 C:\Users\Fabian\PhpstormProjects\untitled\App\controllers\Error.controller.php(7): App\Controllers\ControllerBase->__construct()
+#4 C:\Users\Fabian\PhpstormProjects\untitled\App\core\App.php(40): App\Controllers\ErrorController->__construct()
+#5 C:\Users\Fabian\PhpstormProjects\untitled\App\index.php(10): App->__construct()
+#6 {main}
+  thrown in C:\Users\Fabian\PhpstormProjects\untitled\vendor\league\plates\src\Template\Directory.php on line 35

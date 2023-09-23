@@ -4,6 +4,8 @@ namespace App\Core;
 use FastRoute\RouteCollector;
 use FastRoute;
 use App\Controllers\ErrorController;
+use App\Controllers\LoginController;
+use App\Controllers\HomeController;
 
 class App
 {
@@ -35,12 +37,10 @@ class App
         switch ($routeInfo[0]) {
             case FastRoute\Dispatcher::NOT_FOUND:
                 // ... 404 Not Found
-                error_log("error 404");
                 $error = new ErrorController();
                 $error->Index(["error"=>"404", "msg"=>"Pagina no encontrada.!"]);
                 break;
             case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
-                error_log("error 405");
                 $allowedMethods = $routeInfo[1];
                 // ... 405 Method Not Allowed
                 $error = new ErrorController();
@@ -51,7 +51,6 @@ class App
                 $vars = $routeInfo[2];
                 // Obtener el controlador y la acción
                 list($controller, $action) = explode('@', $handler);
-                #error_log("CONTROLADOR:". $controller);
                 // Llamar al controlador y la acción
                 $instanceController = new $controller;
                 $instanceController->$action($vars);

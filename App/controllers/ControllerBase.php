@@ -3,39 +3,70 @@
 namespace App\Controllers;
 
 use League\Plates\Engine;
+use App\Core\Session;
 
-class ControllerBase
+class ControllerBase implements Session
 {
-    private $templates;
-    private $requireSession;
+    private Engine $templates;
+    private bool $requireSession;
+    private bool $sessionActive = false;
 
-    public function __construct($requireSession, $className)
+    public function __construct($requireSession = true, $className)
     {
-        $className = explode('\\',$className);
-        error_log ("CONTROLADOR CARGADO: ". ($className[2]));
-        session_start();
-
+        self::log($className);
         $this->templates = new Engine( dirname(__DIR__) .'\Views\Templates');
         $this->requireSession = $requireSession;
 
-        // Inicia la sesión en el constructor si se requiere
-        // ...
-        if ($this->requireSession) {
-            if (!$this->checkSession()) {
+        // Valida la sesión en el constructor
+        if ($this->requireSession) { #SI REQUIERE SESION
+
+                #VALIDAR ROLES - PENDIENTE
+            if ($this->checkSession()) { #SI SE VALIDA UNA SESION EXISTENTE
+                $this->sessionActive = true;
+            }else{
                 // Redirigir o realizar acciones en función de la sesión no válida
+                PHP_SESSION_ACTIVE && session_unset();
+                #PHP_SESSION_ACTIVE && session_abort();
+                PHP_SESSION_ACTIVE && session_destroy();
+                header("location: /login");
+                exit();
             }
         }
     }
-    // Verificar la sesión
-    // Agrega un método para verificar la sesión
-    private function checkSession()
+    private static function log($className):void{
+        $className = explode('\\',$className);
+        error_log ("CONTROLADOR CARGADO: ". ($className[2]));
+    }
+
+    public static function initSession(): void
     {
-        // Verificar si la sesión no está activa (por ejemplo, si no hay un usuario logueado)
-        if (!isset($_SESSION['user'])) {
+        session_start();
+    }
+
+    public function checkSession($id):bool
+    {
+        #VEFICA SI SESION ESTA VACIO
+        #VALIDAR ESTO CON ID EN BD
+        if (!isset($_SESSION['userId'])) {
             return false;
         }
         return true;
     }
+public function setSessionId($id): bool
+    {
+        if(PHP_SESSION_ACTIVE && !empty($id)){
+            if($_SESSION["userId"] = $id) return true;
+        }
+        return false;
+    }
+
+public function finishSession(): void
+    {
+        $this->sessionActive = false;
+        session_unset();
+        session_destroy();
+    }
+
     // Create a template object
     public function getIndex($template, $data = [])
     {
@@ -53,7 +84,6 @@ class ControllerBase
     {
         foreach ($params as $param) {
             if (!isset($_POST[$param])) {
-                error_log("Controlador::ExistsPOST => No existe el parametro $param");
                 return false;
             }
         }
@@ -63,7 +93,6 @@ class ControllerBase
     {
         foreach ($params as $param) {
             if (!isset($_GET[$param])) {
-                error_log("Controlador::ExistsGET => No existe el parametro $param");
                 return false;
             }
         }
@@ -78,4 +107,8 @@ class ControllerBase
     {
         return $_POST[$param];
     }
+
+
+
+
 }

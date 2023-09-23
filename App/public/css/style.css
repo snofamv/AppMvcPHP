@@ -1,3 +1,117 @@
-*{
-    background-color: burlywood;
+body {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente en la pantalla */
+    align-items: center; /* Centrar verticalmente en la pantalla */
+    height: 100vh; /* Altura completa de la pantalla */
+    margin: 0;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 13%, rgba(28,70,98,1) 55%, rgba(0,129,156,1) 86%);background-size: 200% 200%;
+    animation: gradientAnimation 20s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+
+    }
+    100% {
+        background-position: 100% 20%;
+    }
+    0% {
+        background-position: 0% 0%;
+
+    }
+}
+
+.container-form {
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5); /* Nueva sombra en hover */
+    border: 1px solid rgba(255, 179, 0, 0.95);
+    background-color: rgba(75, 82, 126, 0.31);
+    font-family: "Microsoft Sans Serif";
+    text-align: center; /* Alinear los elementos horizontalmente */
+    border-radius: 5px;
+    padding: 30px;
+    width: 420px;
+    height: 280px;
+    animation: borderAnimation 2s alternate infinite; /*ANIMACION INFINITA*/
+
+    & .form-group {
+        display: flex;
+        flex-direction: column; /* Alinear los elementos uno debajo del otro */
+        align-items: center; /* Centrar horizontalmente los elementos en el grupo */
+        margin: 10px; /* Espacio entre los grupos de elementos */
+    }
+
+    & .form-group label {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    & .form-group input {
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: 0.5s ease-in-out ;
+
+    }
+    & .form-group input:focus {
+        background-color: #9DB2BF;
+        font-weight: bold;
+
+    }
+
+   & .btn {
+       display: block;
+       font-size: 15px;
+       font-weight: bolder;
+        background-color: #007bff;
+        color: white;
+        border: none;
+       width: 100%;
+        height: 55px;
+       border-radius: 4px;
+        cursor: pointer;
+       box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+       transition: background-color, box-shadow 0.3s ease-in-out;
+    }
+    & .btn:hover{
+        background-color: rgba(0, 212, 255, 0.59);
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5); /* Nueva sombra en hover */
+
+
+    }
+}
+/*animacion de borde colorido form infintino*/
+@keyframes borderAnimation {
+    0% {
+        box-shadow: 0px 0px 50px rgb(230, 0, 255); /* Nueva sombra en hover */
+        border-color: rgba(161, 0, 255, 0.95);
+    }
+    50% {
+        box-shadow: 0px 0px 50px rgb(255, 0, 132); /* Nueva sombra en hover */
+        border-color: rgba(161, 0, 255, 0.95);
+
+    }
+    100% {
+        box-shadow: 0px 0px 50px rgb(230, 0, 255); /* Nueva sombra en hover */
+        border-color: rgba(161, 0, 255, 0.95);
+
+    }
+  50% {
+        box-shadow: 0px 0px 50px rgb(255, 0, 132); /* Nueva sombra en hover */
+      border-color: rgba(161, 0, 255, 0.95);
+
+
+  }
+    0% {
+
+        box-shadow: 0px 0px 50px rgb(230, 0, 255); /* Nueva sombra en hover */
+        border-color: rgba(161, 0, 255, 0.95);
+    }
 }

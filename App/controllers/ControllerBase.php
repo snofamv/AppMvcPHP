@@ -5,7 +5,7 @@ namespace App\Controllers;
 use League\Plates\Engine;
 use App\Core\Session;
 
-class ControllerBase implements Session
+class ControllerBase
 {
     private Engine $templates;
     private bool $requireSession;
@@ -43,7 +43,7 @@ class ControllerBase implements Session
         session_start();
     }
 
-    public function checkSession($id):bool
+    public function checkSession($id = ""):bool
     {
         #VEFICA SI SESION ESTA VACIO
         #VALIDAR ESTO CON ID EN BD

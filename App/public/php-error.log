@@ -1,8 +1,14 @@
-[23-Sep-2023 23:31:39 Europe/Berlin] ##############################################
-[23-Sep-2023 23:31:39 Europe/Berlin] CONTROLADOR CARGADO: LoginController
-[23-Sep-2023 23:31:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\LoginController::setSession() in C:\xampp\htdocs\App\controllers\LoginController.php:24
+[25-Sep-2023 04:10:28 Europe/Berlin] ##############################################
+[25-Sep-2023 04:10:28 Europe/Berlin] CONTROLADOR CARGADO: HomeController
+[25-Sep-2023 04:10:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\App\models\ModelBase.php:27
 Stack trace:
-#0 C:\xampp\htdocs\App\core\App.php(56): App\Controllers\LoginController->login(Array)
-#1 C:\xampp\htdocs\App\public\index.php(10): App\Core\App->__construct()
-#2 {main}
-  thrown in C:\xampp\htdocs\App\controllers\LoginController.php on line 24
+#0 C:\xampp\htdocs\App\controllers\HomeController.php(18): App\Models\ModelBase->getAllFromTable('usuarios')
+#1 C:\xampp\htdocs\App\controllers\HomeController.php(13): App\Controllers\HomeController->test()
+#2 C:\xampp\htdocs\App\core\App.php(56): App\Controllers\HomeController->index(Array)
+#3 C:\xampp\htdocs\App\public\index.php(10): App\Core\App->__construct()
+#4 {main}
+  thrown in C:\xampp\htdocs\App\models\ModelBase.php on line 27
+[25-Sep-2023 04:11:28 Europe/Berlin] ##############################################
+[25-Sep-2023 04:11:28 Europe/Berlin] CONTROLADOR CARGADO: HomeController
+[25-Sep-2023 04:11:28 Europe/Berlin] ##############################################
+[25-Sep-2023 04:11:28 Europe/Berlin] CONTROLADOR CARGADO: ErrorController

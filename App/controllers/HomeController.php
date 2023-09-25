@@ -1,13 +1,22 @@
 <?php
 namespace App\Controllers;
+use App\Config\Config;
+use App\Models\User;
+
 class HomeController extends ControllerBase
 {
     public function __construct() {
-        self::initSession();
+        $this->initSession();
         parent::__construct(true, __CLASS__);
     }
     public function index():void{
-        error_log("HomeController::Index()");
-        echo parent::getIndex("home/index", ["idUser" => 1, "userName" => "fABIANCITO", "userPass" => "ASDASD123"]);
+        echo parent::getIndex("home/index", ["datos"=>$this->test()]);
+    }
+
+    public function test(): array{
+        $usuario = new User;
+        $usuarios = $usuario->getAllFromTable("usuarios");
+        return $usuarios;
+
     }
 }
